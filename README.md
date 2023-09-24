@@ -1,1 +1,1 @@
-# aplicacao-notas
+# journay-note

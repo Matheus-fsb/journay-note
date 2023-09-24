@@ -1,0 +1,18 @@
+.center-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.center-div h1{
+    font-family: 'Inika';
+    font-size: 10vw;
+    color: aliceblue;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    user-select: none;
+}

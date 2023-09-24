@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-3.css">
+    <title>Nome do Diário</title>
+</head>
+<body>
+    <nav class="fade-in-animation"><button class="voltar" onclick="funcionalidades.trocarPaginaBotao('pag_nome_diario.html')">Voltar</button></nav>
+
+    <div class="center-div-pag-criacao fade-in-animation">
+        <h1>Qual será a senha do seu diário?</h1>
+        <form method="get" onsubmit="informacoes_usuario.definirSenha(event)">
+            <input id="inputSenha" type="password" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this), funcionalidades.mensagemLarguraMin(this)" maxlength="25" minlength="8">
+            <div id="mensagemLimite">
+                <p>Tamanho limite da senha é de 25 caracteres</p>
+            </div>
+            <div id="mensagemMin">
+                <p>O tamanho mínimo da senha é de 8 caracteres</p>
+            </div>
+            <button>Proceguir</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
