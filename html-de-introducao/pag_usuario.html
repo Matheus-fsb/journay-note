@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css-de-introducao/style.css">
+    <link rel="stylesheet" href="../css-de-introducao/style-2.css">
+    <title>Nome</title>
+</head>
+<body>
+
+    <nav class="fade-in-animation">
+        <button class="voltar" onclick="funcionalidades.trocarPaginaBotao('index.html')">
+            Voltar
+        </button>
+    </nav>
+
+    <div class="center-div-pag-criacao fade-in-animation">
+        <h1>Qual é seu nome, Viajante?</h1>
+        <form method="get" onsubmit="informacoes_usuario.definirNome(event)">
+            <input id="inputUsuario" type="text" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this)" maxlength="25">
+
+            <div id="mensagemLimite">
+                <p>Tamanho limite do nome é de 25 caracteres</p>
+            </div>
+
+            <div id="mensagemProsseguir">
+                <p>Para prossegui é necessário digitar algo</p>
+            </div>
+            
+            <input type="submit" value="Prosseguir" onclick="funcionalidades.trocarPaginaBotao('pag_nome_diario.html')">
+        </form>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "name": "aplicacao-notas",
   "version": "1.0.0",
-  "description": "",
+  "description": "é necessario baixar o módulo do electro",
   "main": "index.js",
   "scripts": {
     "start": "electron ."
@@ -11,5 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^26.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matheus-fsb/journay-note.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Matheus-fsb/journay-note/issues"
+  },
+  "homepage": "https://github.com/Matheus-fsb/journay-note#readme"
 }

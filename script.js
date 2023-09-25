@@ -9,6 +9,15 @@ const funcionalidades = {
             window.location.href = paghtml;
         }, 1000);
     },
+
+    verificarInput(input){
+        const valorInput = input.value
+        const mensagemProssegui = document.getElementById('mensagemProssegui')
+        if(valorInput === ""){
+            
+        }
+
+    },
     
     aumentarLarguraInput(input) {
         const tamanhoTexto = input.value.length;
@@ -32,9 +41,9 @@ const funcionalidades = {
         const tamanhoTexto = input.value.length;
         const maxlength = parseInt(input.getAttribute("maxlength"));
         if(tamanhoTexto >= maxlength){
-            mensagemLimite.style.opacity = "1";
+            mensagemLimite.style.display = "block";
         } else {
-            mensagemLimite.style.opacity = "0";
+            mensagemLimite.style.display = "none";
         }
     },
 
@@ -43,9 +52,9 @@ const funcionalidades = {
         const tamanhoTexto = input.value.length;
         const minlength = parseInt(input.getAttribute("minlength"));
         if (tamanhoTexto > 0 && tamanhoTexto < minlength) {
-            mensagemMin.style.opacity = "1";
+            mensagemMin.style.display = "block";
         } else {
-            mensagemMin.style.opacity = "0";
+            mensagemMin.style.display = "none";
         }
     }
     
@@ -76,7 +85,7 @@ class infoUsuario{
         event.preventDefault();
         let inputSenha = document.getElementById("inputSenha");
         this.senhaUsuario = inputSenha.value;
-
+        console.log(this.senhaUsuario)
     }
 }
 
