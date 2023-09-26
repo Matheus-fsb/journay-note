@@ -14,7 +14,7 @@
     <div class="center-div-pag-criacao fade-in-animation">
         <h1>Qual será o nome do seu diário?</h1>
         <form method="get" onsubmit="informacoes_usuario.definirNomeDiario(event)">
-            <input id="inputNomeDiario" type="text" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this), funcionalidades.mensagemLarguraMin(this)" maxlength="25" minlength="3">
+            <input id="inputNomeDiario" type="text" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this), funcionalidades.mensagemLarguraMin(this), funcionalidades.verificarPassagem(this, 'nome')" maxlength="25" minlength="3">
             <div class="box_mensagens">
                 <div id="mensagemLimite">
                     <p>Tamanho limite do nome é de 25 caracteres</p>
@@ -23,7 +23,7 @@
                     <p>Para prosseguir é necessário criar um nome para seu diário com no mínimo 3 caracteres</p>
                 </div>
             </div>
-        <button type="submit" onclick="funcionalidades.trocarPaginaBotao('pag_senha.html')">Prosseguir</button>
+        <button type="submit" onclick="funcionalidades.trocarPaginaBotaoVerificada('pag_senha.html')">Prosseguir</button>
         </form>
     </div>
 

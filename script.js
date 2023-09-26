@@ -1,8 +1,7 @@
 const funcionalidades = {
 
-    podePassarUser: false,
-    podePassarNome: false,
-    podePassarSenha: false,
+    prosseguirNome: false,
+    prosseguirSenha: false,
 
     trocarPaginaBotao(paghtml) {
         const bodyElement = document.body;
@@ -12,6 +11,21 @@ const funcionalidades = {
         setTimeout(() => {
             window.location.href = paghtml;
         }, 1000);
+    },
+
+    trocarPaginaBotaoVerificada(paghtml) {
+        const bodyElement = document.body;
+
+        if (this.prosseguirNome === true || this.prosseguirSenha === true) {
+            bodyElement.classList.add('fade-out-animation');
+            setTimeout(() => {
+                window.location.href = paghtml;
+            }, 1000);
+            this.prosseguirNome = false;
+            this.prosseguirSenha = false;
+        } else {
+            alert("Requisitos não cumpridos");
+        }
     },
     
     aumentarLarguraInput(input) {
@@ -50,6 +64,24 @@ const funcionalidades = {
             mensagemMin.style.display = "block";
         } else {
             mensagemMin.style.display = "none";
+        }
+    },
+
+    verificarPassagem(input, tipoPag) {
+        const valorInput = input.value.length;
+    
+        if (tipoPag === 'nome') {
+            if (valorInput < 3) {
+                this.prosseguirNome = false;
+            } else {
+                this.prosseguirNome = true; 
+            }
+        } else if (tipoPag === 'senha') {
+            if (valorInput < 8) {
+                this.prosseguirSenha = false; 
+            } else {
+                this.prosseguirSenha = true; 
+            }
         }
     }
     

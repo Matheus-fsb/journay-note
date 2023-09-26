@@ -18,7 +18,7 @@
     <div class="center-div-pag-criacao fade-in-animation">
         <h1>Qual é seu nome, Viajante?</h1>
         <form method="get" onsubmit="informacoes_usuario.definirNome(event)">
-            <input id="inputUsuario" type="text" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this), funcionalidades.mensagemLarguraMin(this)" maxlength="25" minlength="3">
+            <input id="inputUsuario" type="text" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this), funcionalidades.mensagemLarguraMin(this), funcionalidades.verificarPassagem(this, 'nome')" maxlength="25" minlength="3">
 
             <div class="box_mensagens">
                 <div id="mensagemLimite">
@@ -30,7 +30,8 @@
                 </div>
             </div>
             
-            <input type="submit" value="Prosseguir" onclick="funcionalidades.trocarPaginaBotao('pag_nome_diario.html')">
+            <button type="submit" onclick="funcionalidades.trocarPaginaBotaoVerificada('pag_nome_diario.html')">Prosseguir</button>
+
             
         </form>
     </div>

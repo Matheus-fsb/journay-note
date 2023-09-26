@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css-de-introducao/style-5.css">
+    <link rel="stylesheet" href="../css-de-introducao/style.css">
+    <title>Journal Note</title>
+</head>
+<body>
+    <div class="center-div-pag-criacao fade-in-animation">
+        <h1>Você confirma estas informações?</h1>
+        <form method="get">
+            <label for="user">Nome do Usuário</label>
+            <input type="text" name="user">
+            <label for="journal_name">Nome do Diário</label>
+            <input type="text" name="journal_name">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha">
+            <button type="submit">Finalizar</button>
+            <div class="box_mensagens">
+                <div id="mensagemLimite">
+                    <p>Tamanho limite da senha é de 25 caracteres</p>
+                </div>
+                <div id="mensagemMin">
+                    <p>O tamanho mínimo da senha é de 8 caracteres</p>
+                </div>
+                <div id="mensagemMin">
+                    <p>Para prosseguir é necessário criar um usuário com no mínimo 3 caracteres</p>
+                </div>
+            </div>
+        </form>
+    </div>   
+     <script src="script.js"></script>
+</body>
+</html>

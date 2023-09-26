@@ -13,7 +13,7 @@
     <div class="center-div-pag-criacao fade-in-animation">
         <h1>Qual será a senha do seu diário?</h1>
         <form method="get" onsubmit="informacoes_usuario.definirSenha(event)">
-            <input id="inputSenha" type="password" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this), funcionalidades.mensagemLarguraMin(this)" maxlength="25" minlength="8">
+            <input id="inputSenha" type="password" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this), funcionalidades.mensagemLarguraMin(this), funcionalidades.verificarPassagem(this, 'senha')" maxlength="25" minlength="8">
             <div class="box_mensagens">
                 <div id="mensagemLimite">
                     <p>Tamanho limite da senha é de 25 caracteres</p>
@@ -22,7 +22,7 @@
                     <p>O tamanho mínimo da senha é de 8 caracteres</p>
                 </div>
             </div>
-            <input type="submit" value="Prosseguir">
+            <button type="submit">Prosseguir</button>
         </form>
     </div>
 
