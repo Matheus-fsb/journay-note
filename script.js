@@ -1,5 +1,9 @@
 const funcionalidades = {
 
+    podePassarUser: false,
+    podePassarNome: false,
+    podePassarSenha: false,
+
     trocarPaginaBotao(paghtml) {
         const bodyElement = document.body;
 
@@ -8,15 +12,6 @@ const funcionalidades = {
         setTimeout(() => {
             window.location.href = paghtml;
         }, 1000);
-    },
-
-    verificarInput(input){
-        const valorInput = input.value
-        const mensagemProssegui = document.getElementById('mensagemProssegui')
-        if(valorInput === ""){
-            
-        }
-
     },
     
     aumentarLarguraInput(input) {
@@ -51,7 +46,7 @@ const funcionalidades = {
         const mensagemMin = document.getElementById("mensagemMin");
         const tamanhoTexto = input.value.length;
         const minlength = parseInt(input.getAttribute("minlength"));
-        if (tamanhoTexto > 0 && tamanhoTexto < minlength) {
+        if (tamanhoTexto < minlength) {
             mensagemMin.style.display = "block";
         } else {
             mensagemMin.style.display = "none";

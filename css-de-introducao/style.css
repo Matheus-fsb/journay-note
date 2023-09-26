@@ -142,4 +142,41 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+#mensagemMin p{
+    user-select: none;
+    font-family: 'Inika';
+    color: aliceblue;
+    margin: 0px;
+}
+
+#mensagemMin{
+    transition: opacity 0.5s;
+    opacity: 1;
+    display: none;
+    position: absolute;
+}
+
+#mensagemLimite p{
+    user-select: none;
+    font-family: 'Inika';
+    color: aliceblue;
+    margin: 0px;
+}
+
+#mensagemLimite{
+    transition: opacity 0.5s;
+    opacity: 1;
+    display: none;
+    position: absolute;
+}
+
+.box_mensagens{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

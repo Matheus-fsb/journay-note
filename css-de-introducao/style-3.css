@@ -30,30 +30,6 @@
     }
 }
 
-#mensagemLimite p{
-    user-select: none;
-    font-family: 'Inika';
-    color: aliceblue;
-    margin: 0px;
-}
-
-#mensagemLimite{
-    animation: fade-in 0.5s 1;
-    animation-direction: alternate;
-    opacity: 1;
-}
-
-#mensagemMin p{
-    user-select: none;
-    font-family: 'Inika';
-    color: aliceblue;
-    margin: 0px;
-}
-
-#mensagemMin{
-    opacity: 1;
-}
-
 .voltar{
     margin-right: 20px;
 }

@@ -18,17 +18,20 @@
     <div class="center-div-pag-criacao fade-in-animation">
         <h1>Qual é seu nome, Viajante?</h1>
         <form method="get" onsubmit="informacoes_usuario.definirNome(event)">
-            <input id="inputUsuario" type="text" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this)" maxlength="25">
+            <input id="inputUsuario" type="text" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this), funcionalidades.mensagemLarguraMin(this)" maxlength="25" minlength="3">
 
-            <div id="mensagemLimite">
-                <p>Tamanho limite do nome é de 25 caracteres</p>
-            </div>
-
-            <div id="mensagemProsseguir">
-                <p>Para prossegui é necessário digitar algo</p>
+            <div class="box_mensagens">
+                <div id="mensagemLimite">
+                    <p>Tamanho limite do nome é de 25 caracteres</p>
+                </div>
+    
+                <div id="mensagemMin">
+                    <p>Para prosseguir é necessário criar um usuário com no mínimo 3 caracteres</p>
+                </div>
             </div>
             
             <input type="submit" value="Prosseguir" onclick="funcionalidades.trocarPaginaBotao('pag_nome_diario.html')">
+            
         </form>
     </div>
 

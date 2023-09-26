@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css-de-introducao/style.css">
-    <link rel="stylesheet" href="../css-de-introducao/style-3.css">
+    <link rel="stylesheet" href="../css-de-introducao/style-4.css">
     <title>Nome do Diário</title>
 </head>
 <body>
@@ -14,13 +14,15 @@
         <h1>Qual será a senha do seu diário?</h1>
         <form method="get" onsubmit="informacoes_usuario.definirSenha(event)">
             <input id="inputSenha" type="password" oninput="funcionalidades.aumentarLarguraInput(this), funcionalidades.mensagemLarguraMax(this), funcionalidades.mensagemLarguraMin(this)" maxlength="25" minlength="8">
-            <div id="mensagemLimite">
-                <p>Tamanho limite da senha é de 25 caracteres</p>
+            <div class="box_mensagens">
+                <div id="mensagemLimite">
+                    <p>Tamanho limite da senha é de 25 caracteres</p>
+                </div>
+                <div id="mensagemMin">
+                    <p>O tamanho mínimo da senha é de 8 caracteres</p>
+                </div>
             </div>
-            <div id="mensagemMin">
-                <p>O tamanho mínimo da senha é de 8 caracteres</p>
-            </div>
-            <button>Prosseguir</button>
+            <input type="submit" value="Prosseguir">
         </form>
     </div>
 
